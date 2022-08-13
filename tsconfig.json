@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es2021", "dom"],
+    "lib": ["es2021"],
     "allowJs": true,
     "declaration": true,
     "module": "commonjs",
