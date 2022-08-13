@@ -6,7 +6,6 @@ class MissingResourceError<P extends object> extends HTTPError<P> {
             code: 'missingResource',
             httpStatus: 404,
             payload: payload || ({} as P),
-
         });
     }
 }
