@@ -2,13 +2,14 @@
 
 This is a pretty basic library to help you handle errors in your express APIs
 
-[Installation](#installation)
-[Setting up the middleware](#setting-up-the-middleware)
-[Using HTTP Errors](#using-http-errors)
--   [Available errors](#available-errors)
--   [Passing additionnal data](#passing-additionnal-data)
-    [Creating your own HTTP errors](#creating-your-own-http-errors)
+Table of content:
 
+-   [Installation](#installation)
+-   [Setting up the middleware](#setting-up-the-middleware)
+-   [Using HTTP Errors](#using-http-errors)
+    -   [Available errors](#available-errors)
+    -   [Passing additionnal data](#passing-additionnal-data)
+-   [Creating your own HTTP errors](#creating-your-own-http-errors)
 
 ## Installation
 
@@ -40,8 +41,7 @@ app.use(
 
 ## Using HTTP Errors
 
-Once the middleware is set up, you can throw some HTTP errors, their code and HTTP status will be used to respond to the
-client
+Once the middleware is set up, you can throw some HTTP errors, their code and HTTP status will be used to respond to the client
 
 #### Available errors
 
@@ -81,8 +81,7 @@ This will generate a json response with a 404 status and this body:
 }
 ```
 
-**Note: if you use express v5+ and your handler returns a promise, you can actually throw the error instead of calling _
-next_**
+**Note: if you use express v5+ and your handler returns a promise, you can actually throw the error instead of calling _next_**
 
 #### Passing additionnal data
 
