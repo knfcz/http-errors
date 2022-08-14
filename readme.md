@@ -8,7 +8,7 @@ Table of content:
 -   [Setting up the middleware](#setting-up-the-middleware)
 -   [Using HTTP Errors](#using-http-errors)
     -   [Available errors](#available-errors)
-    -   [Passing additionnal data](#passing-additionnal-data)
+    -   [Passing additional data](#passing-additional-data)
 -   [Creating your own HTTP errors](#creating-your-own-http-errors)
 
 ## Installation
@@ -83,9 +83,9 @@ This will generate a json response with a 404 status and this body:
 
 **Note: if you use express v5+ and your handler returns a promise, you can actually throw the error instead of calling _next_**
 
-#### Passing additionnal data
+#### Passing additional data
 
-If you want to pass some additionnal data to the client, you can pass an object to the error constructor
+If you want to pass some additional data to the client, you can pass an object to the error constructor
 
 ```js
 throw new MissingResourceError({
