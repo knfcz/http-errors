@@ -1,6 +1,6 @@
 # http-errors
 
-This is a pretty basic library to help you handle errors in your express APIs
+This is a pretty basic library to facilitate error handling in express APIs
 
 Table of content:
 
@@ -43,6 +43,8 @@ app.use(
 
 Once the middleware is set up, you can throw some HTTP errors, their code and HTTP status will be used to respond to the client
 
+If a different kind of error is caught, the middleware will respond with a 500 HTTP status
+
 #### Available errors
 
 | Name                    | Code               | HTTP Status | Description                               |
@@ -72,7 +74,7 @@ const getArticle = async (req, res, next) => {
 };
 ```
 
-This will generate a json response with a 404 status and this body:
+This will send a json response with a 404 status and this body:
 
 ```json
 {
@@ -85,7 +87,7 @@ This will generate a json response with a 404 status and this body:
 
 #### Passing additional data
 
-If you want to pass some additional data to the client, you can pass an object to the error constructor
+If you want to pass some additional data to the client, you can pass an object to the error's constructor
 
 ```js
 throw new MissingResourceError({
@@ -94,7 +96,7 @@ throw new MissingResourceError({
 });
 ```
 
-Will give the following body
+will send the following body
 
 ```json
 {
@@ -108,7 +110,7 @@ Will give the following body
 
 ## Creating your own HTTP errors
 
-You can extends the base class to create your own HTTP errors:
+You can extend the base class to create your own HTTP errors:
 
 ```js
 // http/errors/FuckYouError.js
