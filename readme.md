@@ -1,5 +1,7 @@
 # http-errors
 
+[![npm version](https://img.shields.io/npm/v/@knfcz/http-errors.svg?style=flat)](https://www.npmjs.com/package/@knfcz/http-errors)
+
 This is a pretty basic library to facilitate error handling in express APIs
 
 Table of content:
@@ -121,6 +123,7 @@ class FuckYouError extends HTTPError {
         super({
             code: 'fuckYou',
             httpStatus: 500,
+            payload,
         });
     }
 }
